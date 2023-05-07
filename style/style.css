@@ -96,10 +96,10 @@ button {
 .logo-icon {
     color: var(--color-light-blue);
     position: absolute;
-    font-size: 3.3vw; /* Usando uma unidade de medida relativa (vw) */
-    margin-left: -12.7%; /* Posicionando em relação ao elemento pai */
-    margin-top: 0.5%; /* Posicionando no centro verticalmente */
-    transform: translate(0, -50%); /* Alinhando verticalmente */
+    font-size: 3.3vw; 
+    margin-left: -12.7%;
+    margin-top: 0.5%;
+    transform: translate(0, -50%);
 }
 
 .nav-logo {
