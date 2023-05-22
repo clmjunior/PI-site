@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="/css/style.css">
+    
+        <title>TODOIST - Página Inicial</title>
+    </head>
+<body>
+    <div class="wrap-contents">
+        <div class="sidebar-container">
+            <div>
+                <a href="#">
+                    <img class="nav-logo" src="/img/empty-light-logo.png" id="sidebar-img">
+                </a>
+                <ion-icon class="sidebar-logo-icon animate__animated animate__jackInTheBox" name="checkmark-circle-outline">
+            </div>
+            <div class="sidebar-item active" id="homepage">
+                <a href="dashboard.html"><ion-icon name="grid" class="sidebar-icon"></ion-icon>Página Inicial</a>
+            </div>
+            <div class="sidebar-item" id="tasks">
+                <a href="mytasks.html"><ion-icon name="layers" class="sidebar-icon"></ion-icon>Minhas Tarefas</a>
+            </div>
+            <div class="sidebar-item" id="calendar">
+                <a href="calendar.html"><ion-icon name="today" class="sidebar-icon"></ion-icon>Calendário</a>
+            </div>
+            <div class="sidebar-item" id="settings">
+                <a href="settings.html"><ion-icon name="settings" class="sidebar-icon"></ion-icon>Configurações</a>
+            </div>
+            <div class="sidebar-logout">
+                <hr/>
+                <div class="container-logout">
+                    <img src="/img/clara-garcia.png" id="sidebar-logout-img">
+                    <b>Clara Garcia</b> 
+                </div>
+                <a href="login.html" class="logout-button">
+                    <button type="button" class="logout-sidebar-button">
+                        <ion-icon name="log-out" class="sidebar-icon-logout"></ion-icon><b>Sair</b>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <main class="dashboard-content">
+            <nav class="navbar">
+                <div class="nav-search">
+                    <span class="searchbar-icon">
+                        <ion-icon name="search"></ion-icon>
+                    </span>
+                    <input type="search" class="searchbar-nav" placeholder="Pesquisar...">
+                </div>
+                <div class="nav-notifications">
+                    <ion-icon name="notifications"></ion-icon>
+                </div>
+                <div class="nav-profile">
+                    <img src="/img/clara-garcia.png" id="nav-profile-img">
+                </div>
+            </nav>
+            <header class="options">
+                <div class="options-task">
+                    <div class="task-marker"></div>
+                    <div class="task-container">
+                        <div class="task-title">Tarefa Inicial</div>
+                        <div class="task-content">Olá, bem vindo ao TODOIST. Sua primeira missão é criar uma nova tarefa.</div>
+                    </div>
+                </div>
+                <div class="option-new-task">
+                    <button class="new-task">
+                        <ion-icon name="duplicate"></ion-icon>Nova Tarefa
+                    </button>
+                </div>
+                <!--OPÇÕES PARA SEREM FINALIZADAS, DESENVOLVER SELECT COM 3 OPTIONS PARA RELATORIO E MAIS UM BOTÃO-->
+                <!-- <div class="option-classify">
+                    <select class="new-report">
+                        <option value="1"></option>
+                        <option value="1"></option>
+                        <option value="1"></option>
+                    </select>
+                </div> -->
+            </header>
+            <!--FINALIZAR CONTEUDO DA PAGINA-->
+            <!-- <section class="content">
+                <div class="left-content"></div>
+                <div class="right-content"></div>
+            </section> -->
+        </main>
+    </div>
+</body>
+</html>
