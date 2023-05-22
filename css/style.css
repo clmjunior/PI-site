@@ -516,7 +516,7 @@ button {
 
 .dashboard-content{
     width: 82%;
-    background-color: #3498db;
+    background-color: var(--color-white);
 }
 
 .navbar {
