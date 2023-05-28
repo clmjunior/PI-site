@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
-        <link rel="icon" href="img/favicon.png">
-        <link rel="stylesheet" href="/css/style.css">
-    
-        <title>TODOIST - Página Inicial</title>
-    </head>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>TODOIST - Página Inicial</title>
+</head>
+
 <body>
     <div class="wrap-contents">
         <div class="sidebar-container">
@@ -22,25 +24,34 @@
                 <a href="#">
                     <img class="nav-logo" src="/img/empty-light-logo.png" id="sidebar-img">
                 </a>
-                <ion-icon class="sidebar-logo-icon animate__animated animate__jackInTheBox" name="checkmark-circle-outline">
+                <ion-icon class="sidebar-logo-icon animate__animated animate__jackInTheBox"
+                    name="checkmark-circle-outline">
             </div>
             <div class="sidebar-item active" id="homepage">
-                <a href="dashboard.html"><ion-icon name="grid" class="sidebar-icon"></ion-icon>Página Inicial</a>
+                <a href="dashboard.html">
+                    <ion-icon name="grid" class="sidebar-icon"></ion-icon>Página Inicial
+                </a>
             </div>
             <div class="sidebar-item" id="tasks">
-                <a href="mytasks.html"><ion-icon name="layers" class="sidebar-icon"></ion-icon>Minhas Tarefas</a>
+                <a href="mytasks.html">
+                    <ion-icon name="layers" class="sidebar-icon"></ion-icon>Minhas Tarefas
+                </a>
             </div>
             <div class="sidebar-item" id="calendar">
-                <a href="calendar.html"><ion-icon name="today" class="sidebar-icon"></ion-icon>Calendário</a>
+                <a href="calendar.html">
+                    <ion-icon name="today" class="sidebar-icon"></ion-icon>Calendário
+                </a>
             </div>
             <div class="sidebar-item" id="settings">
-                <a href="settings.html"><ion-icon name="settings" class="sidebar-icon"></ion-icon>Configurações</a>
+                <a href="settings.html">
+                    <ion-icon name="settings" class="sidebar-icon"></ion-icon>Configurações
+                </a>
             </div>
             <div class="sidebar-logout">
-                <hr/>
+                <hr />
                 <div class="container-logout">
                     <img src="/img/clara-garcia.png" id="sidebar-logout-img">
-                    <b>Clara Garcia</b> 
+                    <b>Clara Garcia</b>
                 </div>
                 <a href="login.html" class="logout-button">
                     <button type="button" class="logout-sidebar-button">
@@ -69,7 +80,8 @@
                     <div class="task-marker"></div>
                     <div class="task-container">
                         <div class="task-title">Tarefa Inicial</div>
-                        <div class="task-content">Olá, bem vindo ao TODOIST. Sua primeira missão é criar uma nova tarefa.</div>
+                        <div class="task-content">Olá, bem vindo ao TODOIST. Sua primeira missão é criar uma nova
+                            tarefa.</div>
                     </div>
                 </div>
                 <div class="option-new-task">
@@ -86,12 +98,165 @@
                     </select>
                 </div> -->
             </header>
-            <!--FINALIZAR CONTEUDO DA PAGINA-->
-            <!-- <section class="content">
-                <div class="left-content"></div>
+            <section class="content">
+                <div class="left-content">
+                    <div class="notes">
+                        <div class="notes-item">Anotação...</div>
+                        <div class="notes-item">Anotação...</div>
+                        <div class="notes-item">Anotação...</div>
+                        <div class="notes-item">Anotação...</div>
+                        <div class="notes-item">Anotação...</div>
+                        <div class="notes-item">Anotação...</div>
+                        <div class="notes-item">Anotação...</div>
+                    </div>
+                    <div class="statistics">
+                        <div class="stats">
+                            <div class="stats-item pending">
+                                <div class="number-stats">11</div>
+                                <div class="title-stats">Pendentes</div>
+                            </div>
+                            <div class="stats-item exec">
+                                <div class="number-stats">2</div>
+                                <div class="title-stats">Em execução</div>
+                            </div>
+                            <div class="stats-item finished">
+                                <div class="number-stats">36</div>
+                                <div class="title-stats">Finalizadas</div>
+                            </div>
+                        </div>
+                        <div class="graphic-container">
+                            <div class="graphic-header">
+                                <div class="graphic-title">Suas Estatísticas</div>
+                                <div class="graphic-filter">
+                                    <select name="graphic-filter" class="graphic-filter" id="filter-select">
+                                        <option value="week">Semanal</option>
+                                        <option value="month">Mensal</option>
+                                        <option value="year">Anual</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="graphic-body">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            var chartData = {
+                                labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+                                datasets: [{
+                                        label: 'Semana Passada',
+                                        data: [4, 4, 6, 8, 6, 2, 4],
+                                        backgroundColor: 'rgba(183, 183, 183, 0.2)',
+                                        borderColor: 'rgba(183, 183, 183, 1)',
+                                        borderWidth: 1,
+                                        fill: 'origin'
+                                    },
+                                    {
+                                        label: 'Semana Atual',
+                                        data: [2, 6, 4, 2, 6],
+                                        backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                                        borderColor: 'rgba(52, 152, 219, 1)',
+                                        borderWidth: 1,
+                                        fill: 'origin'
+                                    }
+                                ]
+                            };
+
+                            var chartOptions = {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: 'Tarefas Finalizadas',
+                                        align: 'start',
+                                    },
+                                    legend: {
+                                        display: true,
+                                        align: 'end',
+                                        labels: {
+                                            usePointStyle: true,
+                                            boxWidth: 8,
+                                            radius: 8,
+                                        }
+                                    }
+                                },
+                                scales: {
+                                    y: {
+                                        min: 0,
+                                        max: 20,
+                                        stepSize: 4,
+                                        grid: {
+                                            color: 'rgba(0, 0, 0, 0.1)' // Cor das linhas de grade horizontal
+                                        }
+                                    },
+                                    x: {
+                                        grid: {
+                                            display: false // Oculta as linhas de grade verticais
+                                        }
+                                    }
+                                },
+
+                                layout: {
+                                    padding: {
+                                        top: 0
+                                    }
+                                },
+                            };
+
+                            var ctx = document.getElementById('myChart').getContext('2d');
+                            var chart = new Chart(ctx, {
+                                type: 'line',
+                                data: chartData,
+                                options: chartOptions
+                            });
+
+                            var selectElement = document.getElementById('filter-select');
+                            selectElement.addEventListener('change', function () {
+                                var selectedOption = selectElement.value;
+
+                                // Atualiza os dados do gráfico com base na opção selecionada
+                                if (selectedOption === 'week') {
+                                    chart.data.labels = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+                                    chart.data.datasets[0].label = 'Semana Passada';
+                                    chart.data.datasets[0].data = [4, 4, 6, 8, 6, 2, 4];
+                                    chart.data.datasets[1].label = 'Semana Atual';
+                                    chart.data.datasets[1].data = [2, 6, 4, 2, 6];
+                                    chart.options.scales.y.min = 0;
+                                    chart.options.scales.y.max = 20;
+                                    chart.options.scales.y.stepSize = 4;
+                                } else if (selectedOption === 'month') {
+                                    chart.data.labels = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
+                                    chart.data.datasets[0].label = 'Mês Anterior';
+                                    chart.data.datasets[0].data = [50, 42, 35, 18];
+                                    chart.data.datasets[1].label = 'Mês Atual';
+                                    chart.data.datasets[1].data = [60, 50, 35, 70];
+                                    chart.options.scales.y.min = 0;
+                                    chart.options.scales.y.max = 100;
+                                    chart.options.scales.y.stepSize = 20;
+                                } else if (selectedOption === 'year') {
+                                    chart.data.labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul'];
+                                    chart.data.datasets[0].label = 'Ano Anterior';
+                                    chart.data.datasets[0].data = [50, 120, 200, 300, 350, 300, 400];
+                                    chart.data.datasets[1].label = 'Ano Atual';
+                                    chart.data.datasets[1].data = [200, 150, 120, 400, 320];
+                                    chart.options.scales.y.min = 0;
+                                    chart.options.scales.y.max = 500;
+                                    chart.options.scales.y.stepSize = 6;
+                                }
+
+                                chart.update(); // Atualiza o gráfico com os novos dados
+                            });
+                        </script>
+
+
+                    </div>
+                </div>
                 <div class="right-content"></div>
-            </section> -->
+            </section>
         </main>
     </div>
 </body>
+
 </html>
