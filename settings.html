@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
-        <link rel="icon" href="img/favicon.png">
-        <link rel="stylesheet" href="/css/style.css">
-    
-        <title>TODOIST - Configurações</title>
-    </head>
-<body>
-    <header>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
     </header>
     <div class="sidebar-container">
@@ -51,13 +39,40 @@
                 <img src="/img/clara-garcia.png" id="sidebar-logout-img">
                 <b>Clara Garcia</b> 
             </div>
-            <a href="login.html" class="logout-button">
-                <button type="button" class="logout-sidebar-button">
-                    <ion-icon name="log-out" class="sidebar-icon-logout"></ion-icon><b>Sair</b>
-                </button>
-            </a>
         </div>
-    </div>
+        
+        <div class="settings-container">
+            <h1>Configurações de Conta</h1>
+            <div class="account-settings">
+                <h2>Alterar Senha</h2>
+                <form>
+                    <label for="current-password">Senha atual:</label>
+                    <input type="password" id="current-password" required>
     
-</body>
-</html>
+                    <label for="new-password">Nova senha:</label>
+                    <input type="password" id="new-password" required>
+    
+                    <label for="confirm-password">Confirmar senha:</label>
+                    <input type="password" id="confirm-password" required>
+    
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+    
+            <div class="account-settings">
+                <h2>Preferências de Notificação</h2>
+                <div class="notification-options">
+                    <div class="notification-option">
+                        <input type="checkbox" id="task-reminder">
+                        <label for="task-reminder">Lembrar-me das tarefas</label>
+                    </div>
+                    <div class="notification-option">
+                        <input type="checkbox" id="daily-summary">
+                        <label for="daily-summary">Resumo diário de tarefas</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    </html>
