@@ -20,7 +20,7 @@
 <body>
     <div class="wrap-contents">
         <div class="sidebar-container">
-            <div>
+            <div class="side-logo">
                 <a href="#">
                     <img class="nav-logo" src="/img/empty-light-logo.png" id="sidebar-img">
                 </a>
@@ -29,34 +29,35 @@
             </div>
             <div class="sidebar-item active" id="homepage">
                 <a href="dashboard.html">
-                    <ion-icon name="grid" class="sidebar-icon"></ion-icon>Página Inicial
+                    <ion-icon name="grid" class="sidebar-icon"></ion-icon><font class="sidebar-text">Página Inicial</font>
                 </a>
             </div>
             <div class="sidebar-item" id="tasks">
                 <a href="mytasks.html">
-                    <ion-icon name="layers" class="sidebar-icon"></ion-icon>Minhas Tarefas
+                    <ion-icon name="layers" class="sidebar-icon"></ion-icon><font class="sidebar-text">Minhas Tarefas</font>
                 </a>
             </div>
             <div class="sidebar-item" id="calendar">
                 <a href="calendar.html">
-                    <ion-icon name="today" class="sidebar-icon"></ion-icon>Calendário
+                    <ion-icon name="today" class="sidebar-icon"></ion-icon><font class="sidebar-text">Calendário</font>
                 </a>
             </div>
             <div class="sidebar-item" id="settings">
                 <a href="settings.html">
-                    <ion-icon name="settings" class="sidebar-icon"></ion-icon>Configurações
+                    <ion-icon name="settings" class="sidebar-icon"></ion-icon><font class="sidebar-text">Configurações</font>
                 </a>
             </div>
             <div class="sidebar-logout">
-                <hr />
                 <div class="container-logout">
                     <img src="/img/clara-garcia.png" id="sidebar-logout-img">
                     <b>Clara Garcia</b>
                 </div>
                 <a href="login.html" class="logout-button">
                     <button type="button" class="logout-sidebar-button">
-                        <ion-icon name="log-out" class="sidebar-icon-logout"></ion-icon><b>Sair</b>
+                        <ion-icon name="log-out" class="sidebar-icon-logout"></ion-icon>
+                        <b>Sair</b>
                     </button>
+                    
                 </a>
             </div>
         </div>
@@ -89,14 +90,6 @@
                         <ion-icon name="duplicate"></ion-icon>Nova Tarefa
                     </button>
                 </div>
-                <!--OPÇÕES PARA SEREM FINALIZADAS, DESENVOLVER SELECT COM 3 OPTIONS PARA RELATORIO E MAIS UM BOTÃO-->
-                <!-- <div class="option-classify">
-                    <select class="new-report">
-                        <option value="1"></option>
-                        <option value="1"></option>
-                        <option value="1"></option>
-                    </select>
-                </div> -->
             </header>
             <section class="content">
                 <div class="left-content">
@@ -139,8 +132,89 @@
                                 <canvas id="myChart"></canvas>
                             </div>
                         </div>
-
-                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="new-note">
+                        Gravar uma anotação...
+                    </div>
+                    <div class="line-wrapper">
+                        <div class="line-container">
+                            <div class="tasks-ellipse">
+                                <div class="inside-ellipse">
+                                    <div class="point"></div>
+                                </div>
+                            </div>
+                            <div class="next-tasks-line"></div>
+                            <div class="tasks-ellipse">
+                                <div class="inside-ellipse">
+                                    <div class="point"></div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="next-tasks-container">
+                            <div class="next-tasks-title"><h1>Próximas Tarefas</h1></div>
+                            <div class="next-task">
+                                <div class="left-content-task">
+                                    <div class="title-next-task">
+                                        Chamada Reunião
+                                    </div>
+                                    <div class="content-next-task">
+                                        Discutir tarefas do dia.
+                                    </div>
+                                </div>
+                                <div class="right-content-task">
+                                    <div class="time-next-task">
+                                        09:00
+                                    </div>
+                                    <div class="status-next-task">
+                                        <ion-icon name="close"></ion-icon><ion-icon name="checkmark-circle">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next-task">
+                                <div class="left-content-task">
+                                    <div class="title-next-task">
+                                        Preparar Slides
+                                    </div>
+                                    <div class="content-next-task">
+                                        Criar uma apresentação de slides sobre o novo produto da empresa.
+                                    </div>
+                                </div>
+                                <div class="right-content-task">
+                                    <div class="time-next-task">
+                                        11:00
+                                    </div>
+                                    <div class="status-next-task">
+                                        <ion-icon name="close"></ion-icon><ion-icon name="checkmark-circle">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next-task">
+                                <div class="left-content-task">
+                                    <div class="title-next-task">
+                                        Relatório Mensal
+                                    </div>
+                                    <div class="content-next-task">
+                                        Gerar relatório detalhado das métricas de desempenho da empresa.
+                                    </div>
+                                </div>
+                                <div class="right-content-task">
+                                    <div class="time-next-task">
+                                        15:00
+                                    </div>
+                                    <div class="status-next-task">
+                                        <ion-icon name="close"></ion-icon><ion-icon name="checkmark-circle">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                         <script>
                             var chartData = {
                                 labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
@@ -249,14 +323,6 @@
                                 chart.update(); // Atualiza o gráfico com os novos dados
                             });
                         </script>
-
-
-                    </div>
-                </div>
-                <div class="right-content"></div>
-            </section>
-        </main>
-    </div>
 </body>
 
 </html>
