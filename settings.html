@@ -5,42 +5,61 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    </header>
-    <div class="sidebar-container">
-        <div>
-            <a href="#">
-                <img class="nav-logo" src="/img/empty-light-logo.png" id="sidebar-img">
-            </a>
-            <ion-icon class="sidebar-logo-icon animate__animated animate__jackInTheBox" name="checkmark-circle-outline">
-        </div>
-        <div class="sidebar-item" id="homepage">
-            <a href="dashboard.html">
-                <ion-icon name="grid" class="sidebar-icon"></ion-icon></ion-icon><font class="sidebar-text">Página Inicial</font>
-            </a>
-        </div>
-        <div class="sidebar-item" id="tasks">
-            <a href="mytasks.html">
-                <ion-icon name="layers" class="sidebar-icon"></ion-icon></ion-icon><font class="sidebar-text">Minhas Tarefas</font>
-            </a>
-        </div>
-        <div class="sidebar-item" id="calendar">
-            <a href="calendar.html">
-                <ion-icon name="today" class="sidebar-icon"></ion-icon></ion-icon><font class="sidebar-text">Calendário</font>
-            </a>
-        </div>
-        <div class="sidebar-item active" id="settings">
-            <a href="settings.html">
-                <ion-icon name="settings" class="sidebar-icon"></ion-icon></ion-icon><font class="sidebar-text">Configurações</font>
-            </a>
-        </div>
-        <div class="sidebar-logout">
-            <div class="container-logout">
-                <img src="/img/clara-garcia.png" id="sidebar-logout-img">
-                <b>Clara Garcia</b> 
+
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
+            <link rel="icon" href="img/favicon.png">
+            <link rel="stylesheet" href="/css/settings.css">
+
+            <title>TODOIST - Configurações</title>
+        </head>
+    <body>
+        <div class="wrap-contents">
+        <div class="sidebar-container">
+            <div class="side-logo">
+                <a href="#">
+                    <img class="nav-logo" src="/img/empty-light-logo.png" id="sidebar-img">
+                </a>
+                <ion-icon class="sidebar-logo-icon animate__animated animate__jackInTheBox"
+                    name="checkmark-circle-outline">
+            </div>
+            <div class="sidebar-item " id="homepage">
+                <a href="dashboard.html">
+                    <ion-icon name="grid" class="sidebar-icon"></ion-icon><font class="sidebar-text">Página Inicial</font>
+                </a>
+            </div>
+            <div class="sidebar-item" id="tasks">
+                <a href="mytasks.html">
+                    <ion-icon name="layers" class="sidebar-icon"></ion-icon><font class="sidebar-text">Minhas Tarefas</font>
+                </a>
+            </div>
+            <div class="sidebar-item" id="calendar">
+                <a href="calendar.html">
+                    <ion-icon name="today" class="sidebar-icon"></ion-icon><font class="sidebar-text">Calendário</font>
+                </a>
+            </div>
+            <div class="sidebar-item active" id="settings">
+                <a href="settings.html">
+                    <ion-icon name="settings" class="sidebar-icon"></ion-icon><font class="sidebar-text">Configurações</font>
+                </a>
+            </div>
+            <div class="sidebar-logout">
+                <div class="container-logout">
+                    <img src="/img/clara-garcia.png" id="sidebar-logout-img">
+                    <b>Clara Garcia</b>
+                </div>
+                <a href="login.html" class="logout-button">
+                    <button type="button" class="logout-sidebar-button">
+                        <ion-icon name="log-out" class="sidebar-icon-logout"></ion-icon>
+                        <b>Sair</b>
+                    </button>
+                    
+                </a>
             </div>
         </div>
-        
+
         <div class="settings-container">
             <h1>Configurações de Conta</h1>
             <div class="account-settings">
@@ -73,6 +92,7 @@
                 </div>
             </div>
         </div>
-        
+    </div>
+
     </body>
     </html>

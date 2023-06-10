@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="img/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
 
     <title>TODOIST - Página Inicial</title>
@@ -69,10 +70,10 @@
                     </span>
                     <input type="search" class="searchbar-nav" placeholder="Pesquisar...">
                 </div>
-                <div class="nav-notifications">
-                    <ion-icon name="notifications"></ion-icon>
-                </div>
                 <div class="nav-profile">
+                    <div class="nav-notifications">
+                        <ion-icon name="notifications"></ion-icon>
+                    </div>
                     <img src="/img/clara-garcia.png" id="nav-profile-img">
                 </div>
             </nav>
@@ -85,11 +86,7 @@
                             tarefa.</div>
                     </div>
                 </div>
-                <div class="option-new-task">
-                    <button class="new-task">
-                        <ion-icon name="duplicate"></ion-icon>Nova Tarefa
-                    </button>
-                </div>
+                
             </header>
             <section class="content">
                 <div class="left-content">
@@ -97,11 +94,33 @@
                         <div class="notes-item">Anotação...</div>
                         <div class="notes-item">Anotação...</div>
                         <div class="notes-item">Anotação...</div>
+                        <button class="notes-item show-more-button" id="showMoreButton" data-bs-toggle="modal" data-bs-target="#allNotes">Mostrar tudo...</button>
                         <div class="notes-item">Anotação...</div>
                         <div class="notes-item">Anotação...</div>
                         <div class="notes-item">Anotação...</div>
                         <div class="notes-item">Anotação...</div>
-                    </div>
+                        
+                        <div class="modal fade" id="allNotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Todas as Anotações</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-items notes-item">Anotação...</div>
+                                    <div class="modal-items notes-item">Anotação...</div>
+                                    <div class="modal-items notes-item">Anotação...</div>
+                                    <div class="modal-items notes-item">Anotação...</div>
+                                    <div class="modal-items notes-item">Anotação...</div>
+                                    <div class="modal-items notes-item">Anotação...</div>
+                                    <div class="modal-items notes-item">Anotação...</div>
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                     <div class="statistics">
                         <div class="stats">
                             <div class="stats-item pending">
@@ -136,7 +155,11 @@
                 </div>
                 <div class="right-content">
                     <div class="new-note">
-                        Gravar uma anotação...
+                            <div>
+                                <b>Gravar uma anotação...</b>
+                            </div>
+                                <input type="text" class="quickNote" placeholder="Título">
+                                <textarea name="quickNote" class="quickNote" id="quickNote" placeholder="Descrição"></textarea>
                     </div>
                     <div class="line-wrapper">
                         <div class="line-container">
@@ -214,6 +237,7 @@
             </section>
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                         <script>
                             var chartData = {
