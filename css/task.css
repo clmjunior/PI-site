@@ -193,7 +193,7 @@ button {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   flex-basis: calc(20% - 20px);
-  height: 200px; 
+  height: auto; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,6 +213,12 @@ button {
 
 .task-card p {
   margin: 10px 0;
+}
+
+.task-button {
+  width:100%;
+  display: flex;
+  justify-content: end;
 }
 
 @media (max-width: 770px) {

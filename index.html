@@ -10,6 +10,8 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="/css/style.css">
@@ -20,7 +22,7 @@
 <body>
     <header>
         <nav class="navbar-landing">
-            <div class="container">
+            <div class="container-landing">
                 <div class="top">
                     <a href="#">
                         <ion-icon name="call"></ion-icon>&nbsp;(xx) xxxx-xxxx
@@ -48,8 +50,8 @@
                     <ion-icon class="logo-icon animate__animated animate__jackInTheBox" name="checkmark-circle-outline">
                 </div>
                 <div class="top-nav"><a href="#">HOME</a></div>
-                <div class="top-nav"><a href="#">EMPRESA</a></div>
-                <div class="top-nav "><a href="#">CONTATO</a></div>
+                <div class="top-nav"><a href="#company">EMPRESA</a></div>
+                <div class="top-nav "><a href="#contact">CONTATO</a></div>
             </div>
         </nav>
     </header>
@@ -57,7 +59,7 @@
         <section class="first-section">
             <img class="first-section-img" src="img/first-section-img.png">
         </section>
-        <section class="mid-section">
+        <section class="mid-section" id="company">
             <div class="mid-container">
                 <div class="container-content">
                     <div class="mid-title">
@@ -80,6 +82,33 @@
                 <div class="mid-img">
                     <img class="mid-section-img" src="img/mid-section-img.png">
                 </div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <div class="email-form">
+                <h1 class="contact-title"><ion-icon name="mail"></ion-icon>&nbsp;Envie uma mensagem!</h1>
+                <form>
+                    <div class="container-email">
+                        <div class="mb-3 item-mail">
+                            <label for="exampleInputEmail1" class="form-label"><small>E-mail</small></label>
+                            <input type="email" placeholder="E-mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"><small>Nós não compartilharemos seu e-mail.</small></div>
+                        </div>
+                        <div class="mb-3 item-mail">
+                            <label for="exampleInputPassword1" class="form-label"><small>Senha</small></label>
+                            <input type="password" placeholder="Senha" class="form-control" id="exampleInputPassword1">
+                        </div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Mensagem" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea"><small>Mensagem</small></label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1"><small>Deseja receber notificações?</small></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
         </section>
         <footer class="footer">
@@ -142,7 +171,7 @@
         </footer>
     </main>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>

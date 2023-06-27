@@ -56,18 +56,56 @@
             </a>
         </div>
         <div class="sidebar-logout">
-            <div class="container-logout">
+            <a data-bs-toggle="dropdown" aria-expanded="false"><div class="container-logout">
                 <img src="/img/clara-garcia.png" id="sidebar-logout-img">
-                <b>Clara Garcia</b> 
-            </div>
+                <b>Clara Garcia</b>
+            </div></a>
             <a href="login.html" class="logout-button">
                 <button type="button" class="logout-sidebar-button">
-                    <ion-icon name="log-out" class="sidebar-icon-logout"></ion-icon><b>Sair</b>
+                    <ion-icon name="log-out" class="sidebar-icon-logout"></ion-icon>
+                    <b>Sair</b>
                 </button>
             </a>
+            <div class="dropdown">
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editarPerfilModal">Editar Perfil</a></li>
+                </ul>
+              </div>
         </div>
       </div>
     </div>
+
+    
+    <div class="modal fade" id="editarPerfilModal" tabindex="-1" aria-labelledby="editarPerfilModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editarPerfilModalLabel">Editar Perfil</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="mb-3">
+                  <label for="bio" class="form-label">Biografia</label>
+                  <textarea class="form-control" id="bio" rows="3" placeholder="Digite sua biografia"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="foto" class="form-label">Foto de Perfil</label>
+                  <input type="file" class="form-control" id="foto">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary">Salvar Alterações</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
     <div class="tasks-container">
         <div class="option-new-task"><a class="new-task">
@@ -117,22 +155,163 @@
         </div>
     </div>
         <div class="task-board">
+
             <div class="task-card">
                 <h3>Tarefa 1</h3>
                 <p>Descrição da tarefa 1.</p>
+                <div class="task-button">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#tarefa1">
+                        <ion-icon name="create"></ion-icon>
+                    </button>
+                </div>
             </div>
+            
+            <!-- Modal 1 -->
+            <div class="modal fade" id="tarefa1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Tarefa</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="tituloTarefa" class="form-label">Título da Tarefa</label>
+                          <input type="text" class="form-control" id="tituloTarefa" value="Tarefa 1" placeholder="Digite o título da tarefa">
+                        </div>
+                        <div class="mb-3">
+                          <label for="descricaoTarefa" class="form-label">Descrição da Tarefa</label>
+                          <textarea class="form-control" id="descricaoTarefa" rows="3" placeholder="Digite a descrição da tarefa">Descrição da tarefa 1.</textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Excluir</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             <div class="task-card">
                 <h3>Tarefa 2</h3>
                 <p>Descrição da tarefa 2.</p>
+                <div class="task-button">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#tarefa2">
+                        <ion-icon name="create"></ion-icon>
+                    </button>
+                </div>
             </div>
+
+            <!-- Modal 2 -->
+            <div class="modal fade" id="tarefa2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Tarefa</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="tituloTarefa" class="form-label">Título da Tarefa</label>
+                          <input type="text" class="form-control" id="tituloTarefa" value="Tarefa 2" placeholder="Digite o título da tarefa">
+                        </div>
+                        <div class="mb-3">
+                          <label for="descricaoTarefa" class="form-label">Descrição da Tarefa</label>
+                          <textarea class="form-control" id="descricaoTarefa" rows="3" placeholder="Digite a descrição da tarefa">Descrição da tarefa 2.</textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Excluir</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             <div class="task-card">
                 <h3>Tarefa 3</h3>
                 <p>Descrição da tarefa 3.</p>
+                <div class="task-button">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#tarefa3">
+                        <ion-icon name="create"></ion-icon>
+                    </button>
+                </div>
             </div>
+
+            <!-- Modal 3 -->
+            <div class="modal fade" id="tarefa3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Tarefa</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="tituloTarefa" class="form-label">Título da Tarefa</label>
+                          <input type="text" class="form-control" id="tituloTarefa" value="Tarefa 3" placeholder="Digite o título da tarefa">
+                        </div>
+                        <div class="mb-3">
+                          <label for="descricaoTarefa" class="form-label">Descrição da Tarefa</label>
+                          <textarea class="form-control" id="descricaoTarefa" rows="3" placeholder="Digite a descrição da tarefa">Descrição da tarefa 3.</textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Excluir</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             <div class="task-card">
                 <h3>Tarefa 4</h3>
                 <p>Descrição da tarefa 4.</p>
+                <div class="task-button">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#tarefa4">
+                        <ion-icon name="create"></ion-icon>
+                    </button>
+                </div>
             </div>
+
+            <!-- Modal 4 -->
+            <div class="modal fade" id="tarefa4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Tarefa</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="tituloTarefa" class="form-label">Título da Tarefa</label>
+                          <input type="text" class="form-control" id="tituloTarefa" placeholder="Digite o título da tarefa" value="Tarefa 4">
+                        </div>
+                        <div class="mb-3">
+                          <label for="descricaoTarefa" class="form-label">Descrição da Tarefa</label>
+                          <textarea class="form-control" id="descricaoTarefa" rows="3" placeholder="Digite a descrição da tarefa">Descrição da tarefa 4.</textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Excluir</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 </div>

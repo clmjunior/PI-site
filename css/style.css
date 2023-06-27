@@ -44,7 +44,7 @@ button {
     font-weight: 700;
 }
 
-.container {
+.container-landing {
     background-color: var(--color-navy-blue);
     color: var(--color-white);
     display: flex;
@@ -54,7 +54,7 @@ button {
     align-items: center;
 }
 
-.container a {
+.container-landing a {
     display: flex;
     text-decoration: none;
     color: var(--color-white);
@@ -202,6 +202,39 @@ button {
 .mid-section-img {
     width: 100%;
 }
+
+.email-form {
+    width: 70%;
+}
+
+#floatingTextarea {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: var(--color-light-gray);
+    padding: 60px;
+}
+
+.contact-title {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.container-email {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-mail {
+    width: 48%;
+}
+
 
 .container-footer {
     display: flex;
@@ -521,7 +554,6 @@ button {
     margin-left: 18%;
     width: 82%;
     background-color: var(--color-white);
-    overflow-y: hidden;
 }
 
 .navbar {

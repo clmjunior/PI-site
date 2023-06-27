@@ -49,19 +49,54 @@
                 </a>
             </div>
             <div class="sidebar-logout">
-                <div class="container-logout">
+                <a data-bs-toggle="dropdown" aria-expanded="false"><div class="container-logout">
                     <img src="/img/clara-garcia.png" id="sidebar-logout-img">
                     <b>Clara Garcia</b>
-                </div>
+                </div></a>
                 <a href="login.html" class="logout-button">
                     <button type="button" class="logout-sidebar-button">
                         <ion-icon name="log-out" class="sidebar-icon-logout"></ion-icon>
                         <b>Sair</b>
                     </button>
-                    
                 </a>
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editarPerfilModal">Editar Perfil</a></li>
+                    </ul>
+                  </div>
             </div>
         </div>
+
+        <div class="modal fade" id="editarPerfilModal" tabindex="-1" aria-labelledby="editarPerfilModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="editarPerfilModalLabel">Editar Perfil</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="nome" class="form-label">Nome</label>
+                      <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="mb-3">
+                      <label for="bio" class="form-label">Biografia</label>
+                      <textarea class="form-control" id="bio" rows="3" placeholder="Digite sua biografia"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="foto" class="form-label">Foto de Perfil</label>
+                      <input type="file" class="form-control" id="foto">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <main class="dashboard-content">
             <nav class="navbar">
                 <div class="nav-search">
